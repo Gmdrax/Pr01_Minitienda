@@ -1,0 +1,213 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #2E5224; /* Verde oscuro de fondo */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ========================================
+   CABECERA
+   ======================================== */
+
+header h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   CATÁLOGO (GRID DE PRODUCTOS)
+   ======================================== */
+
+#catalogo {
+    /* Grid responsive que se adapta al tamaño de pantalla */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   TARJETA DE PRODUCTO
+   ======================================== */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox para organizar el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Animación al pasar el ratón */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+}
+
+
+
+.producto-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f4f4f4; /* Fondo gris suave */
+    margin-bottom: 15px;
+}
+
+
+.badge {
+    display: inline-block;
+    background-color: #FF6B35; /* Naranja */
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+
+.info-producto h3 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.info-producto .desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    min-height: 40px; /* Altura mínima para que todas queden alineadas */
+}
+
+.info-producto .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+
+
+.selectors-area {
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+
+
+.selector-talla {
+    margin-bottom: 15px;
+}
+
+.btn-talla {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-talla:hover {
+    border-color: #4A8532; /* Verde al pasar el ratón */
+}
+
+.btn-talla.active {
+    background-color: #4A8532; /* Verde cuando está seleccionado */
+    color: white;
+    border-color: #4A8532;
+}
+
+/* --- Selector de Colores --- */
+
+.selector-color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Hace que sea circular */
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.btn-color.active {
+    border: 2px solid #333; /* Borde negro cuando está seleccionado */
+    transform: scale(1.1); /* Se hace un poco más grande */
+}
+
+/* Colores específicos de las camisetas */
+.color-blanco {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* El blanco necesita un borde para verse */
+}
+
+.color-negro {
+    background-color: #000000;
+}
+
+.color-gris {
+    background-color: #808080;
+}
+
+.color-mostaza {
+    background-color: #FFC107;
+}
+
+.color-azul {
+    background-color: #1A237E;
+}
+
+
+.btn-add-cart {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A8532; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    margin-top: auto; /* Se coloca al final de la tarjeta */
+}
+
+.btn-add-cart:hover {
+    background-color: #366125; /* Verde más oscuro al pasar el ratón */
+}
